@@ -21,4 +21,9 @@ public interface ILogininfoService {
 	boolean checkUsername(String username);
 	
 	Logininfo login(String username, String password, String ip, int userType);
+
+	/**
+	 * 初始化第一个管理员
+	 */
+	void initAdmin();
 }

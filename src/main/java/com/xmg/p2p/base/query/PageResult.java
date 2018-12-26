@@ -26,7 +26,7 @@ public class PageResult {
 	public static PageResult empty(Integer pageSize){
 		return new PageResult(new ArrayList<>(), 0, 1, pageSize);
 	}
-
+	
 	public PageResult(List listData, Integer totalCount, Integer currentPage, Integer pageSize) {
 		this.listData = listData;
 		this.totalCount = totalCount;
@@ -90,8 +90,8 @@ public class PageResult {
 		this.nextPage = nextPage;
 	}
 
-	public Integer getTotalPage() {
-		return totalPage;
+	public int getTotalPage(){
+		return totalPage == 0 ? 1 :totalPage;
 	}
 
 	public void setTotalPage(Integer totalPage) {

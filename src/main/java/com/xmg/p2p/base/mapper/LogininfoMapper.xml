@@ -24,7 +24,8 @@
 		password = #{password,jdbcType=VARCHAR},
 		state = #{state,jdbcType=TINYINT},
 		userType = #{userType}
-		where id = #{id,jdbcType=BIGINT}
+		where id =
+		#{id,jdbcType=BIGINT}
 	</update>
 
 	<sql id="base_column">
@@ -56,5 +57,9 @@
 		where username = #{username}
 		and password = #{password}
 		and userType = #{userType}
+	</select>
+
+	<select id="countByUserType" resultType="int">
+		select count(id) from logininfo where userType = #{userType}
 	</select>
 </mapper>

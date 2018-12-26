@@ -20,6 +20,7 @@ public class IplogQueryObject extends QueryObject{
 	private Date endDate;
 	private int state = -1;
 	private String username;
+	private int userType=-1;
 	
 	public Date getBeginDate() {
 		return beginDate;
@@ -53,6 +54,14 @@ public class IplogQueryObject extends QueryObject{
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public int getUserType() {
+		return userType;
+	}
+
+	public void setUserType(int userType) {
+		this.userType = userType;
 	}
 	
 	

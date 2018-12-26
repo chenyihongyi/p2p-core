@@ -17,6 +17,7 @@ import com.xmg.p2p.base.mapper.LogininfoMapper;
 import com.xmg.p2p.base.service.IAccountService;
 import com.xmg.p2p.base.service.ILogininfoService;
 import com.xmg.p2p.base.service.IUserinfoService;
+import com.xmg.p2p.base.util.BidConst;
 import com.xmg.p2p.base.util.MD5;
 import com.xmg.p2p.base.util.UserContext;
 
@@ -88,6 +89,21 @@ public class LogininfoServiceImpl implements ILogininfoService{
 		}
 		iplogMapper.insert(iplog);
 		return current;
+	}
+
+	@Override
+	public void initAdmin() {
+		//查询当前是否有管理员
+		int count = this.logininfoMapper.countByUserType(Logininfo.USER_MANAGER);
+		//如果没有就创建一个默认的管理员
+		if(count == 0){
+			Logininfo admin = new Logininfo();
+			admin.setUsername(BidConst.DEFAULT_ADMIN_NAME);
+			admin.setPassword(MD5.encode(BidConst.DEFAULT_ADMIN_PASSWORD));
+			admin.setState(Logininfo.STATE_NORMAL);
+			admin.setUserType(Logininfo.USER_MANAGER);
+			this.logininfoMapper.insert(admin);
+		}
 	}
 
 }
