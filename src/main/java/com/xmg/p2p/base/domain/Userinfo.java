@@ -3,6 +3,8 @@
  */
 package com.xmg.p2p.base.domain;
 
+import com.xmg.p2p.base.util.BitStatesUtils;
+
 /**
  * @Description: 
  * @Author: chenyihong
@@ -20,6 +22,10 @@ public class Userinfo extends BaseDomain{
 	private SystemDictionaryItem educationBackground;
 	private SystemDictionaryItem houseCondition;
 
+	//判断是否已经绑定了手机
+	public boolean getIsBindPhone(){
+		return BitStatesUtils.hasState(this.bitState, BitStatesUtils.OP_BIND_PHONE);
+	}
 	public int getVersion() {
 		return version;
 	}
