@@ -13,4 +13,12 @@ public interface IVerifyCodeService {
      * @param phoneNumber
      */
     void sendVerifyCode(String phoneNumber);
+
+	/**
+	 * 验证手机验证码
+	 * @param phoneNumber
+	 * @param verifyCode
+	 * @return
+	 */
+	boolean verify(String phoneNumber, String verifyCode);
 }

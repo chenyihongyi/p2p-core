@@ -50,7 +50,7 @@
 		realName = #{realName,jdbcType=VARCHAR},
 		idNumber = #{idNumber,jdbcType=VARCHAR},
 		phoneNumber = #{phoneNumber,jdbcType=VARCHAR},
-		incomeGrade_id = #{incomeGrade_id,jdbcType=BIGINT},
+		incomeGrade_id = #{incomeGrade.id,jdbcType=BIGINT},
 		marriage_id = #{marriage.id,jdbcType=BIGINT},
 		kidCount_id = #{kidCount.id,jdbcType=BIGINT},
 		educationBackground_id = #{educationBackground.id,jdbcType=BIGINT},

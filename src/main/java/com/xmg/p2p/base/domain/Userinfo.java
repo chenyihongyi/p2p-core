@@ -21,6 +21,10 @@ public class Userinfo extends BaseDomain{
 	private SystemDictionaryItem kidCount;
 	private SystemDictionaryItem educationBackground;
 	private SystemDictionaryItem houseCondition;
+	
+	public void addState(long state){
+		this.setBitState(BitStatesUtils.addState(this.bitState, state));
+	}
 
 	//判断是否已经绑定了手机
 	public boolean getIsBindPhone(){
