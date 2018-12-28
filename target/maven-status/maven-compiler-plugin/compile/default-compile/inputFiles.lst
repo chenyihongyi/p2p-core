@@ -9,6 +9,7 @@ F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\LogininfoServi
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\IUserinfoService.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\Iplog.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\AccountMapper.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\MailVerifyMapper.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\MD5.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\Logininfo.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\SystemDictionaryMapper.java
@@ -16,11 +17,12 @@ F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\SystemDictionaryItem
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\vo\VerifyCodeVO.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\UserinfoServiceImpl.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\LogininfoMapper.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\MailVerify.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\BaseDomain.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\JSONResult.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\query\IplogQueryObject.java
-F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\DateUtil.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\IplogServiceImpl.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\DateUtil.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\BidConst.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\SystemDictionary.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\UserinfoMapper.java
