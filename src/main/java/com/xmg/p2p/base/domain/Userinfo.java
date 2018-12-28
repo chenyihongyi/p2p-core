@@ -16,6 +16,7 @@ public class Userinfo extends BaseDomain{
 	private String realName;
 	private String idNumber;
 	private String phoneNumber;
+	private String email;
 	private SystemDictionaryItem incomeGrade;
 	private SystemDictionaryItem marriage;
 	private SystemDictionaryItem kidCount;
@@ -30,6 +31,12 @@ public class Userinfo extends BaseDomain{
 	public boolean getIsBindPhone(){
 		return BitStatesUtils.hasState(this.bitState, BitStatesUtils.OP_BIND_PHONE);
 	}
+	
+	//判断用户是否已经绑定邮箱
+	public boolean getIsBindEmail(){
+		return BitStatesUtils.hasState(this.bitState, BitStatesUtils.OP_BIND_EMAIL);
+	}
+	
 	public int getVersion() {
 		return version;
 	}
@@ -68,6 +75,14 @@ public class Userinfo extends BaseDomain{
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public SystemDictionaryItem getIncomeGrade() {

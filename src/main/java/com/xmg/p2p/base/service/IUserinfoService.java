@@ -36,4 +36,22 @@ public interface IUserinfoService {
 	 * @param verifyCode
 	 */
 	void bindPhone(String phoneNumber, String verifyCode);
+
+	/**
+	 * 发送绑定邮箱邮件
+	 * @param email
+	 */
+	void sendVerifyEmail(String email);
+	
+	/**
+	 * 得到当前的userinfo对象
+	 * @return
+	 */
+	Userinfo getCurrent();
+
+	/**
+	 * 执行邮箱绑定
+	 * @param uuid
+	 */
+	void bindEmail(String uuid);
 }
