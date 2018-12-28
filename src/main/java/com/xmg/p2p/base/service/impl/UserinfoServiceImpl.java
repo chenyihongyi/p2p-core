@@ -95,7 +95,7 @@ public class UserinfoServiceImpl implements IUserinfoService{
 					.append(BidConst.VERIFYEMAIL_VAILDATE_DAY).append("天");
 
 			try{
-				System.out.println("发送邮件:" + email + "邮件内容:" + content);
+			// System.out.println("发送邮件:" + email + "邮件内容:" + content);
 				//构造一个MailVerify对象
 				MailVerify mv = new MailVerify();
 				mv.setEmail(email);
@@ -131,4 +131,5 @@ public class UserinfoServiceImpl implements IUserinfoService{
 		}
 		throw new RuntimeException("绑定邮箱失败!");
 	}
+
 }
