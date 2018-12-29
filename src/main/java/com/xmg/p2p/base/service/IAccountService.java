@@ -28,4 +28,10 @@ public interface IAccountService {
 	 * @return
 	 */
 	Account get(Long id);
+	
+	/**
+	 * 得到当前登陆用户对应的账户信息
+	 * @return
+	 */
+	Account getCurrent();
 }

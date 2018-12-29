@@ -5,6 +5,8 @@ package com.xmg.p2p.base.domain;
 
 import com.xmg.p2p.base.util.BitStatesUtils;
 
+import freemarker.ext.beans.BooleanModel;
+
 /**
  * @Description: 
  * @Author: chenyihong
@@ -17,6 +19,7 @@ public class Userinfo extends BaseDomain{
 	private String idNumber;
 	private String phoneNumber;
 	private String email;
+	private int score; //风控累计分数
 	private SystemDictionaryItem incomeGrade;
 	private SystemDictionaryItem marriage;
 	private SystemDictionaryItem kidCount;
@@ -35,6 +38,21 @@ public class Userinfo extends BaseDomain{
 	//判断用户是否已经绑定邮箱
 	public boolean getIsBindEmail(){
 		return BitStatesUtils.hasState(this.bitState, BitStatesUtils.OP_BIND_EMAIL);
+	}
+	
+	//判断用户是否填写了基本资料
+	public boolean getIsBasicInfo(){
+		return BitStatesUtils.hasState(this.bitState, BitStatesUtils.OP_BASIC_INFO);
+	}
+	
+	//判断用户是否实名认证
+	public boolean getIsRealAuth(){
+		return BitStatesUtils.hasState(this.bitState, BitStatesUtils.OP_READ_AUTH);
+	}
+	
+	//判断用户是否视频认证
+	public boolean getIsVedioAuth(){
+		return BitStatesUtils.hasState(this.bitState, BitStatesUtils.OP_VEDIO_AUTH);
 	}
 	
 	public int getVersion() {
@@ -83,6 +101,14 @@ public class Userinfo extends BaseDomain{
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 	public SystemDictionaryItem getIncomeGrade() {

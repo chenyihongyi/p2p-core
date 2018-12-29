@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.xmg.p2p.base.domain.Account;
 import com.xmg.p2p.base.mapper.AccountMapper;
 import com.xmg.p2p.base.service.IAccountService;
+import com.xmg.p2p.base.util.UserContext;
 
 /**
  * @Description: 
@@ -38,6 +39,11 @@ public class AccountServiceImpl implements IAccountService{
 	@Override
 	public Account get(Long id) {
 		return this.accountMapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public Account getCurrent() {
+		return this.get(UserContext.getCurrent().getId());
 	}
 
 }

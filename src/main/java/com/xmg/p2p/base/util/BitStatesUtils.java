@@ -11,7 +11,10 @@ package com.xmg.p2p.base.util;
 public class BitStatesUtils {
 	
 	public final static Long OP_BIND_PHONE = 1L; //用户绑定实际状态码
-	public final static Long OP_BIND_EMAIL = 2L <<0; //用户绑定邮箱状态码
+	public final static Long OP_BIND_EMAIL = 1L <<0; //用户绑定邮箱状态码
+	public final static Long OP_BASIC_INFO = 1L <<2; //用户是否填写基本资料
+	public final static Long OP_READ_AUTH = 1L <<3; //用户是否实名认证
+	public final static Long OP_VEDIO_AUTH = 1L <<4; //用户是否视频认证
 	
 	/**
 	 * 

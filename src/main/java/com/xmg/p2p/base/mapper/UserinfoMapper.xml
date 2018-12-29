@@ -10,6 +10,7 @@
 		<result column="idNumber" property="idNumber" jdbcType="VARCHAR" />
 		<result column="email" property="email" jdbcType="VARCHAR" />
 		<result column="phoneNumber" property="phoneNumber" jdbcType="VARCHAR" />
+		<result column="score" property="score" />
 
 		<association property="incomeGrade" javaType="SystemDictionaryItem"
 			column="incomeGrade_id"
@@ -33,13 +34,13 @@
 	</resultMap>
 	<insert id="insert">
 		insert into `userinfo` (id, version, bitState, realName,
-		idNumber, phoneNumber, email, incomeGrade_id,
+		idNumber, phoneNumber, email, score, incomeGrade_id,
 		marriage_id, kidCount_id, educationBackground_id,
 		houseCondition_id)
 		values (#{id}, 0, #{bitState,jdbcType=BIGINT},
 		#{realName,jdbcType=VARCHAR},
 		#{idNumber,jdbcType=VARCHAR}, #{phoneNumber,jdbcType=VARCHAR}, 
-		#{email}, #{incomeGrade.id,jdbcType=BIGINT},
+		#{email}, #{score}, #{incomeGrade.id,jdbcType=BIGINT},
 		#{marriage.id,jdbcType=BIGINT}, #{kidCount.id,jdbcType=BIGINT},
 		#{educationBackground.id,jdbcType=BIGINT},
 		#{houseCondition.id,jdbcType=BIGINT})
@@ -53,6 +54,7 @@
 		idNumber = #{idNumber,jdbcType=VARCHAR},
 		phoneNumber = #{phoneNumber,jdbcType=VARCHAR},
 		email = #{email,jdbcType=VARCHAR},
+		score = #{score}
 		incomeGrade_id = #{incomeGrade.id,jdbcType=BIGINT},
 		marriage_id = #{marriage.id,jdbcType=BIGINT},
 		kidCount_id = #{kidCount.id,jdbcType=BIGINT},
@@ -62,7 +64,7 @@
 	</update>
 	
 	<sql id="base_column">
-	id, version, bitState, realName, idNumber, phoneNumber, email, incomeGrade_id, marriage_id,
+	id, version, bitState, realName, idNumber, phoneNumber, email, score, incomeGrade_id, marriage_id,
 	kidCount_id, educationBackground_id, houseCondition_id
 	</sql>
 	
