@@ -1,4 +1,5 @@
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\MailServiceimpl.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\SystemDictionaryServiceImpl.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\IAccountService.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\VerifyCodeServiceImpl.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\BitStatesUtils.java
@@ -9,6 +10,7 @@ F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\AccountService
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\LogininfoServiceImpl.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\IMailService.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\IUserinfoService.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\ISystemDictionaryService.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\AccountMapper.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\Iplog.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\MailVerifyMapper.java
@@ -19,9 +21,10 @@ F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\SystemDictionaryItem
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\vo\VerifyCodeVO.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\UserinfoServiceImpl.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\LogininfoMapper.java
-F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\MailVerify.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\BaseDomain.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\domain\MailVerify.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\JSONResult.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\query\SystemDictionaryQueryObject.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\query\IplogQueryObject.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\IplogServiceImpl.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\DateUtil.java
