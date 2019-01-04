@@ -20,6 +20,8 @@ public class Userinfo extends BaseDomain{
 	private String phoneNumber;
 	private String email;
 	private int score; //风控累计分数
+	private Long realAuthId;  //该用户对应的实名认证对象id;
+
 	private SystemDictionaryItem incomeGrade;
 	private SystemDictionaryItem marriage;
 	private SystemDictionaryItem kidCount;
@@ -109,6 +111,14 @@ public class Userinfo extends BaseDomain{
 
 	public void setScore(int score) {
 		this.score = score;
+	}
+
+	public Long getRealAuthId() {
+		return realAuthId;
+	}
+
+	public void setRealAuthId(Long realAuthId) {
+		this.realAuthId = realAuthId;
 	}
 
 	public SystemDictionaryItem getIncomeGrade() {
