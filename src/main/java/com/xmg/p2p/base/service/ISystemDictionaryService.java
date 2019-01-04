@@ -42,6 +42,13 @@ public interface ISystemDictionaryService {
 	List<SystemDictionary> listAllDics();
 
 	/**
+	 * 根据数据字典分类sn查询明细
+	 * @param sn
+	 * @return
+	 */
+	List<SystemDictionaryItem> listByParentSn(String sn);
+
+	/**
 	 * 修改或者保存数据字典明细
 	 * @param item
 	 */

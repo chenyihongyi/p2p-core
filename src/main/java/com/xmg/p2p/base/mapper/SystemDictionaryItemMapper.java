@@ -21,4 +21,11 @@ public interface SystemDictionaryItemMapper {
     int queryForCount(SystemDictionaryQueryObject qo);
 
     List<SystemDictionaryItem> query(SystemDictionaryQueryObject qo);
+
+    /**
+     * 根据数据字典分类sn查询明细
+     * @param sn
+     * @return
+     */
+    List<SystemDictionaryItem> listByParentSn(String sn);
 }

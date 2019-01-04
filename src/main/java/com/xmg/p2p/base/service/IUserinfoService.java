@@ -54,4 +54,10 @@ public interface IUserinfoService {
 	 * @param uuid
 	 */
 	void bindEmail(String uuid);
+
+	/**
+	 * 更新用户基本数据
+	 * @param userinfo
+	 */
+    void updateBasicInfo(Userinfo userinfo);
 }

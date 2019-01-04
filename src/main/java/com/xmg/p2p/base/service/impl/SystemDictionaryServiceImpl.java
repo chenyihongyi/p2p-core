@@ -61,7 +61,12 @@ public class SystemDictionaryServiceImpl implements ISystemDictionaryService {
         return this.systemDictionaryMapper.selectAll();
     }
 
-	@Override
+    @Override
+    public List<SystemDictionaryItem> listByParentSn(String sn) {
+        return this.systemDictionaryItemMapper.listByParentSn(sn);
+    }
+
+    @Override
 	public void saveOrUpdateItem(SystemDictionaryItem item) {
 		if(item.getId()!=null){
 			this.systemDictionaryItemMapper.updateByPrimaryKey(item);
