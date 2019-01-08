@@ -100,6 +100,4 @@ public class Account extends BaseDomain{
 		this.borrowLimit = borrowLimit;
 	}
 
-
-	//day03 part04
 }

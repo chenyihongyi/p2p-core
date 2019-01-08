@@ -1,6 +1,11 @@
 package com.xmg.p2p.base.domain;
 
+import com.alibaba.fastjson.JSONObject;
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author Elvis Chen
@@ -17,7 +22,6 @@ public class RealAuth extends BaseDomain {
     public static final int STATE_AUDIT = 1;  //审核通过
     public static final int STATE_REJECT = 2; //审核拒绝
 
-    private Logininfo applier;
     private String realName;
     private int sex;
     private String idNumber;
@@ -25,12 +29,44 @@ public class RealAuth extends BaseDomain {
     private String address;
     private String image1;
     private String image2;
-
-    private int state;
-    private Logininfo auditor;
+    
     private String remark;
+    private int state;
+    private Logininfo applier;
+    private Logininfo auditor;
     private Date applyTime;
     private Date auditTime;
+
+    public String getSexDisplay(){
+        return sex == SEX_MALE ? "男" : "女";
+    }
+
+    public String getSateDisplay() {
+        switch (state) {
+            case STATE_NORMAL:
+                return "待审核";
+            case STATE_AUDIT:
+                return "审核通过";
+            case STATE_REJECT:
+                return "审核拒绝";
+            default:
+                return "";
+        }
+    }
+
+    public String getJsonString(){
+        Map<String, Object> json =new HashMap<>();
+        json.put("id", id);
+        json.put("applier", this.applier.getUsername());
+        json.put("realName", realName);
+        json.put("idNumber", idNumber);
+        json.put("sex", getSexDisplay());
+        json.put("bornDate", bornDate);
+        json.put("address", address);
+        json.put("image1", image1);
+        json.put("image2", image2);
+        return JSONObject.toJSONString(json);
+    }
 
 
     public Logininfo getApplier() {

@@ -6,6 +6,7 @@ F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\VerifyCodeServ
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\util\BitStatesUtils.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\ILogininfoService.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\mapper\IplogMapper.java
+F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\query\RealAuthQueryObject.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\IVerifyCodeService.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\AccountServiceImpl.java
 F:\dhicworkspace\core\src\main\java\com\xmg\p2p\base\service\impl\LogininfoServiceImpl.java
